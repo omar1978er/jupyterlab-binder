@@ -4,6 +4,8 @@
 # File needs to be called /hooks/build relative to the Dockerfile.
 # $IMAGE_NAME var is injected into the build so the tag is correct.
 
+# used for labeling the automated build but fails.. still "latest" is used each time..
+
 echo "Build hook running"
 docker build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
              --build-arg VCS_REF=`git rev-parse --short HEAD` \
