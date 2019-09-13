@@ -5,6 +5,7 @@
 # $IMAGE_NAME var is injected into the build so the tag is correct.
 
 # used for labeling the automated build but fails.. still "latest" is used each time..
+# might give a try to this source: https://artsy.github.io/blog/2018/09/10/Dockerhub-Stamping-Commits/
 
 echo "Build hook running"
 docker build --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
