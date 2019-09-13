@@ -4,9 +4,10 @@ ARG VCS_REF
 LABEL org.label-schema.vcs-ref=$VCS_REF \
       org.label-schema.vcs-url="https://github.com/alperyilmaz/jupyterlab-binder"
       
-# libglib is required for cv package
+# libglib2.0-0 libsm6 libxrender1 libxext6 are required for cv package
+# graphviz is required for lolviz 
 USER root
-RUN apt update && apt install -y --no-install-recommends libglib2.0-0 libsm6 libxrender1 libxext6 graphviz && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt install -y --no-install-recommends libglib2.0-0 libsm6 libxrender1 libxext6 graphviz git && rm -rf /var/lib/apt/lists/*
 USER ${NB_USER}
 
 # install packages from requirements.txt
