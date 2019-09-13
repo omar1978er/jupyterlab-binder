@@ -1,5 +1,9 @@
 FROM jupyter/base-notebook
 
+ARG VCS_REF
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/alperyilmaz/jupyterlab-binder"
+      
 # libglib is required for cv package
 USER root
 RUN apt update && apt install -y --no-install-recommends libglib2.0-0 libsm6 libxrender1 libxext6 graphviz && rm -rf /var/lib/apt/lists/*
