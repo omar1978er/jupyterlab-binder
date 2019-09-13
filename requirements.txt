@@ -1,0 +1,22 @@
+# alperyilmaz/jupyterlab-python-intro 
+bokeh
+lolviz
+matplotlib
+nbval
+networkx
+numpy
+opencv-python
+pandas
+pytest
+scikit-image
+scikit-learn
+scipy
+statsmodels
+sympy
+vdom
+watermark
+# alperyilmaz/jupyterlab-bioinformatics
+biopython
+# misc
+# RISE not supported yet
+nbtutor
