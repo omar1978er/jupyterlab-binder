@@ -5,6 +5,7 @@ matplotlib
 nbval
 networkx
 numpy
+numba
 opencv-python
 pandas
 pytest
